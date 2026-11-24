@@ -41,6 +41,20 @@
       "headers": {
         "Authorization": "Bearer YOUR_APIFY_TOKEN"
       }
+    },
+    "company-dossier": {
+      "type": "streamable-http",
+      "url": "https://shoomaii--company-dossier.apify.actor/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
+    },
+    "saas-pricing-monitor": {
+      "type": "streamable-http",
+      "url": "https://shoomaii--saas-pricing-monitor.apify.actor/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
     }
   }
 }

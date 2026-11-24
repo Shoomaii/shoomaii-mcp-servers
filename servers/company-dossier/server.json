@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Shoomaii/company-dossier",
+  "title": "Company Dossier & Signals API",
+  "description": "Company dossier from any domain: DNS SPF/DMARC grade, tech stack, Trust Center, ATS & GitHub.",
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/shoomaii/company-dossier",
+  "repository": {
+    "url": "https://github.com/Shoomaii/shoomaii-mcp-servers",
+    "source": "github",
+    "id": "1469802036",
+    "subfolder": "servers/company-dossier"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://shoomaii--company-dossier.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <YOUR_APIFY_TOKEN> from https://console.apify.com/settings/integrations",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

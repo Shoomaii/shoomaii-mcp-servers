@@ -1,6 +1,6 @@
 # Shoomaii Real-Time Data MCP Servers
 
-Six hosted **Streamable HTTP** [Model Context Protocol (MCP)](https://modelcontextprotocol.io) servers running on Apify Standby infrastructure. Connect Claude, Cursor, Windsurf, VS Code, or any MCP-compatible AI agent to live structured data with **zero third-party API keys, zero cookies, and zero proxies** — only your Apify API token.
+Eight hosted **Streamable HTTP** [Model Context Protocol (MCP)](https://modelcontextprotocol.io) servers running on Apify Standby infrastructure. Connect Claude, Cursor, Windsurf, VS Code, or any MCP-compatible AI agent to live structured data with **zero third-party API keys, zero cookies, and zero proxies** — only your Apify API token.
 
 > This repository hosts the official documentation, client setup snippets, and [Official MCP Registry](https://registry.modelcontextprotocol.io) manifests (`server.json`) for Shoomaii's live remote MCP servers on Apify.
 
@@ -14,6 +14,8 @@ Six hosted **Streamable HTTP** [Model Context Protocol (MCP)](https://modelconte
 | **Company Hiring Intelligence & Tech Stack** | `https://shoomaii--company-hiring-intelligence.apify.actor/mcp` | `enrich_company_hiring` | [Apify Store](https://apify.com/shoomaii/company-hiring-intelligence) | [`servers/company-hiring-intelligence`](./servers/company-hiring-intelligence/) |
 | **Podcast & Newsletter Sponsor Intelligence** | `https://shoomaii--podcast-newsletter-sponsor-intel.apify.actor/mcp` | `extract_podcast_newsletter_sponsors` | [Apify Store](https://apify.com/shoomaii/podcast-newsletter-sponsor-intel) | [`servers/podcast-newsletter-sponsors`](./servers/podcast-newsletter-sponsors/) |
 | **US WARN Act Layoff Tracker** | `https://shoomaii--us-warn-act-layoffs.apify.actor/mcp` | `search_warn_layoffs` | [Apify Store](https://apify.com/shoomaii/us-warn-act-layoffs) | [`servers/us-warn-act-layoffs`](./servers/us-warn-act-layoffs/) |
+| **Company Dossier & Signals API** | `https://shoomaii--company-dossier.apify.actor/mcp` | `get_company_dossier` | [Apify Store](https://apify.com/shoomaii/company-dossier) | [`servers/company-dossier`](./servers/company-dossier/) |
+| **B2B SaaS Pricing Extractor & Change Monitor** | `https://shoomaii--saas-pricing-monitor.apify.actor/mcp` | `extract_saas_pricing` | [Apify Store](https://apify.com/shoomaii/saas-pricing-monitor) | [`servers/saas-pricing-monitor`](./servers/saas-pricing-monitor/) |
 
 ---
 
@@ -48,10 +50,10 @@ claude mcp add --transport http company-jobs-salaries \
 ```
 
 #### Unified Apify MCP Gateway (OAuth — No Token Required in Config)
-Prefer one OAuth connection for all six Actors through Apify's hosted gateway?
+Prefer one OAuth connection for all eight Actors through Apify's hosted gateway?
 
 ```
-https://mcp.apify.com/?actors=shoomaii/ats-jobs-actor,shoomaii/prediction-markets-odds,shoomaii/prediction-markets-arb,shoomaii/company-hiring-intelligence,shoomaii/podcast-newsletter-sponsor-intel,shoomaii/us-warn-act-layoffs
+https://mcp.apify.com/?actors=shoomaii/ats-jobs-actor,shoomaii/prediction-markets-odds,shoomaii/prediction-markets-arb,shoomaii/company-hiring-intelligence,shoomaii/podcast-newsletter-sponsor-intel,shoomaii/us-warn-act-layoffs,shoomaii/company-dossier,shoomaii/saas-pricing-monitor
 ```
 
 ---
@@ -87,6 +89,16 @@ Pass podcast show names, Apple Podcasts URLs, RSS feeds, or Substack/Beehiiv new
 Query official US state WARN Act mass-layoff and facility closure filings across **CA, NY, WA, MD, OR, WI, and IN** in one normalized schema with public stock ticker and domain mapping.
 - **Tool:** `search_warn_layoffs`
 - **Store:** https://apify.com/shoomaii/us-warn-act-layoffs
+
+### 7. Company Dossier & Signals API (`io.github.Shoomaii/company-dossier`)
+Assemble a complete company intelligence dossier in `<3s` per domain: site summary & key links, Cloudflare DoH MX/SPF/DMARC security grade, tech stack, Trust Center vendor, `llms.txt`, live ATS headcount, and GitHub pulse.
+- **Tool:** `get_company_dossier`
+- **Store:** https://apify.com/shoomaii/company-dossier
+
+### 8. B2B SaaS Pricing Extractor & Change Monitor (`io.github.Shoomaii/saas-pricing-monitor`)
+Auto-discover SaaS `/pricing` pages and deterministically extract structured plan tiers (monthly/annual price, seat vs. usage, free tier, trial, Contact Sales, and Enterprise SSO paywall).
+- **Tool:** `extract_saas_pricing`
+- **Store:** https://apify.com/shoomaii/saas-pricing-monitor
 
 ---
 
