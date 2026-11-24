@@ -1,6 +1,6 @@
 # Shoomaii Real-Time Data MCP Servers
 
-Five hosted **Streamable HTTP** [Model Context Protocol (MCP)](https://modelcontextprotocol.io) servers running on Apify Standby infrastructure. Connect Claude, Cursor, Windsurf, VS Code, or any MCP-compatible AI agent to live structured data with **zero third-party API keys, zero cookies, and zero proxies** — only your Apify API token.
+Six hosted **Streamable HTTP** [Model Context Protocol (MCP)](https://modelcontextprotocol.io) servers running on Apify Standby infrastructure. Connect Claude, Cursor, Windsurf, VS Code, or any MCP-compatible AI agent to live structured data with **zero third-party API keys, zero cookies, and zero proxies** — only your Apify API token.
 
 > This repository hosts the official documentation, client setup snippets, and [Official MCP Registry](https://registry.modelcontextprotocol.io) manifests (`server.json`) for Shoomaii's live remote MCP servers on Apify.
 
@@ -13,6 +13,7 @@ Five hosted **Streamable HTTP** [Model Context Protocol (MCP)](https://modelcont
 | **Prediction Markets Arbitrage & L2 Slippage** | `https://shoomaii--prediction-markets-arb.apify.actor/mcp` | `find_prediction_market_arbitrage`, `get_orderbook_depth_slippage` | [Apify Store](https://apify.com/shoomaii/prediction-markets-arb) | [`servers/prediction-markets-arb`](./servers/prediction-markets-arb/) |
 | **Company Hiring Intelligence & Tech Stack** | `https://shoomaii--company-hiring-intelligence.apify.actor/mcp` | `enrich_company_hiring` | [Apify Store](https://apify.com/shoomaii/company-hiring-intelligence) | [`servers/company-hiring-intelligence`](./servers/company-hiring-intelligence/) |
 | **Podcast & Newsletter Sponsor Intelligence** | `https://shoomaii--podcast-newsletter-sponsor-intel.apify.actor/mcp` | `extract_podcast_newsletter_sponsors` | [Apify Store](https://apify.com/shoomaii/podcast-newsletter-sponsor-intel) | [`servers/podcast-newsletter-sponsors`](./servers/podcast-newsletter-sponsors/) |
+| **US WARN Act Layoff Tracker** | `https://shoomaii--us-warn-act-layoffs.apify.actor/mcp` | `search_warn_layoffs` | [Apify Store](https://apify.com/shoomaii/us-warn-act-layoffs) | [`servers/us-warn-act-layoffs`](./servers/us-warn-act-layoffs/) |
 
 ---
 
@@ -47,10 +48,10 @@ claude mcp add --transport http company-jobs-salaries \
 ```
 
 #### Unified Apify MCP Gateway (OAuth — No Token Required in Config)
-Prefer one OAuth connection for all five Actors through Apify's hosted gateway?
+Prefer one OAuth connection for all six Actors through Apify's hosted gateway?
 
 ```
-https://mcp.apify.com/?actors=shoomaii/ats-jobs-actor,shoomaii/prediction-markets-odds,shoomaii/prediction-markets-arb,shoomaii/company-hiring-intelligence,shoomaii/podcast-newsletter-sponsor-intel
+https://mcp.apify.com/?actors=shoomaii/ats-jobs-actor,shoomaii/prediction-markets-odds,shoomaii/prediction-markets-arb,shoomaii/company-hiring-intelligence,shoomaii/podcast-newsletter-sponsor-intel,shoomaii/us-warn-act-layoffs
 ```
 
 ---
@@ -81,6 +82,11 @@ Turn company domains into Clay/RevOps-ready hiring intelligence: auto-discovers 
 Pass podcast show names, Apple Podcasts URLs, RSS feeds, or Substack/Beehiiv newsletters to extract active brand sponsors, promo codes, vanity/UTM links, placement dates, and repeat-sponsor counts.
 - **Tool:** `extract_podcast_newsletter_sponsors`
 - **Store:** https://apify.com/shoomaii/podcast-newsletter-sponsor-intel
+
+### 6. US WARN Act Layoff Tracker (`io.github.Shoomaii/us-warn-act-layoffs`)
+Query official US state WARN Act mass-layoff and facility closure filings across **CA, NY, WA, MD, OR, WI, and IN** in one normalized schema with public stock ticker and domain mapping.
+- **Tool:** `search_warn_layoffs`
+- **Store:** https://apify.com/shoomaii/us-warn-act-layoffs
 
 ---
 

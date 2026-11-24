@@ -34,6 +34,13 @@
       "headers": {
         "Authorization": "Bearer YOUR_APIFY_TOKEN"
       }
+    },
+    "us-warn-act-layoffs": {
+      "type": "streamable-http",
+      "url": "https://shoomaii--us-warn-act-layoffs.apify.actor/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
     }
   }
 }
