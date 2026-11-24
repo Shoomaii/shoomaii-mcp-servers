@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Shoomaii/podcast-newsletter-sponsors",
+  "title": "Podcast & Newsletter Sponsor Intelligence",
+  "description": "Extract podcast & newsletter sponsors, promo codes, vanity links & repeat counts from RSS/Substack.",
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/shoomaii/podcast-newsletter-sponsor-intel",
+  "repository": {
+    "url": "https://github.com/Shoomaii/shoomaii-mcp-servers",
+    "source": "github",
+    "id": "1469802036",
+    "subfolder": "servers/podcast-newsletter-sponsors"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://shoomaii--podcast-newsletter-sponsor-intel.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <YOUR_APIFY_TOKEN> from https://console.apify.com/settings/integrations",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

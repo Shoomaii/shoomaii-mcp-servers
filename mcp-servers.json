@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "company-jobs-salaries": {
+      "type": "streamable-http",
+      "url": "https://shoomaii--ats-jobs-actor.apify.actor/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
+    },
+    "prediction-markets-odds": {
+      "type": "streamable-http",
+      "url": "https://shoomaii--prediction-markets-odds.apify.actor/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
+    },
+    "prediction-markets-arb": {
+      "type": "streamable-http",
+      "url": "https://shoomaii--prediction-markets-arb.apify.actor/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
+    },
+    "company-hiring-intelligence": {
+      "type": "streamable-http",
+      "url": "https://shoomaii--company-hiring-intelligence.apify.actor/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
+    },
+    "podcast-newsletter-sponsors": {
+      "type": "streamable-http",
+      "url": "https://shoomaii--podcast-newsletter-sponsor-intel.apify.actor/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_APIFY_TOKEN"
+      }
+    }
+  }
+}

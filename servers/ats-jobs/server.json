@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Shoomaii/ats-jobs",
+  "title": "Company Jobs & Salaries (6 ATS Platforms)",
+  "description": "Live open jobs, salaries & seniority from Greenhouse, Lever, Ashby, SmartRecruiters & Recruitee",
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/shoomaii/ats-jobs-actor",
+  "repository": {
+    "url": "https://github.com/Shoomaii/shoomaii-mcp-servers",
+    "source": "github",
+    "id": "1469802036",
+    "subfolder": "servers/ats-jobs"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://shoomaii--ats-jobs-actor.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <YOUR_APIFY_TOKEN> from https://console.apify.com/settings/integrations",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
